@@ -46,18 +46,18 @@ public class LastFrameTest {
 
     @Test
     public void getScore() {
-        Assert.assertEquals(frame1.getScore(), 30);
-        Assert.assertEquals(frame2.getScore(), 27);
-        Assert.assertEquals(frame3.getScore(), 20);
-        Assert.assertEquals(frame4.getScore(), 19);
-        Assert.assertEquals(frame5.getScore(), 20);
-        Assert.assertEquals(frame6.getScore(), 16);
-        Assert.assertEquals(frame7.getScore(), 20);
-        Assert.assertEquals(frame8.getScore(), 20);
-        Assert.assertEquals(frame9.getScore(), 17);
-        Assert.assertEquals(frame10.getScore(), 10);
-        Assert.assertEquals(frame11.getScore(), 10);
-        Assert.assertEquals(frameTemplate.getScore(), 0);
+        Assert.assertEquals(frame1.getBaseScore(), 30);
+        Assert.assertEquals(frame2.getBaseScore(), 27);
+        Assert.assertEquals(frame3.getBaseScore(), 20);
+        Assert.assertEquals(frame4.getBaseScore(), 19);
+        Assert.assertEquals(frame5.getBaseScore(), 20);
+        Assert.assertEquals(frame6.getBaseScore(), 16);
+        Assert.assertEquals(frame7.getBaseScore(), 20);
+        Assert.assertEquals(frame8.getBaseScore(), 20);
+        Assert.assertEquals(frame9.getBaseScore(), 17);
+        Assert.assertEquals(frame10.getBaseScore(), 10);
+        Assert.assertEquals(frame11.getBaseScore(), 10);
+        Assert.assertEquals(frameTemplate.getBaseScore(), 0);
     }
 
     @Test

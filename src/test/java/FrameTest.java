@@ -68,11 +68,11 @@ public class FrameTest {
 
     @Test
     public void getScore() {
-        Assert.assertEquals(strikeFrame.getScore(), 10);
-        Assert.assertEquals(spareFrame.getScore(), 10);
-        Assert.assertEquals(frame.getScore(), 8);
-        Assert.assertEquals(zeroFrame1.getScore(), 5);
-        Assert.assertEquals(zeroSpare.getScore(), 10);
+        Assert.assertEquals(strikeFrame.getBaseScore(), 10);
+        Assert.assertEquals(spareFrame.getBaseScore(), 10);
+        Assert.assertEquals(frame.getBaseScore(), 8);
+        Assert.assertEquals(zeroFrame1.getBaseScore(), 5);
+        Assert.assertEquals(zeroSpare.getBaseScore(), 10);
     }
 
     @Test
@@ -97,69 +97,69 @@ public class FrameTest {
 
     @Test
     public void getScoreWithBonus() {
-        Assert.assertEquals(strikeFrame.getScore(strikeFrame, strikeFrame), 30);
-        Assert.assertEquals(strikeFrame.getScore(strikeFrame, spareFrame), 25);
-        Assert.assertEquals(strikeFrame.getScore(strikeFrame, frame), 26);
-        Assert.assertEquals(strikeFrame.getScore(spareFrame, strikeFrame), 20);
-        Assert.assertEquals(strikeFrame.getScore(spareFrame, spareFrame), 20);
-        Assert.assertEquals(strikeFrame.getScore(spareFrame, frame), 20);
-        Assert.assertEquals(strikeFrame.getScore(frame, strikeFrame), 18);
-        Assert.assertEquals(strikeFrame.getScore(frame, spareFrame), 18);
-        Assert.assertEquals(strikeFrame.getScore(frame, frame), 18);
-        Assert.assertEquals(spareFrame.getScore(strikeFrame, strikeFrame), 20);
-        Assert.assertEquals(spareFrame.getScore(strikeFrame, spareFrame), 20);
-        Assert.assertEquals(spareFrame.getScore(strikeFrame, frame), 20);
-        Assert.assertEquals(spareFrame.getScore(spareFrame, strikeFrame), 15);
-        Assert.assertEquals(spareFrame.getScore(spareFrame, spareFrame), 15);
-        Assert.assertEquals(spareFrame.getScore(spareFrame, frame), 15);
-        Assert.assertEquals(spareFrame.getScore(frame, strikeFrame), 16);
-        Assert.assertEquals(spareFrame.getScore(frame, spareFrame), 16);
-        Assert.assertEquals(spareFrame.getScore(frame, frame), 16);
+        Assert.assertEquals(strikeFrame.getBonusScore(strikeFrame, strikeFrame), 30);
+        Assert.assertEquals(strikeFrame.getBonusScore(strikeFrame, spareFrame), 25);
+        Assert.assertEquals(strikeFrame.getBonusScore(strikeFrame, frame), 26);
+        Assert.assertEquals(strikeFrame.getBonusScore(spareFrame, strikeFrame), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(spareFrame, spareFrame), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(spareFrame, frame), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(frame, strikeFrame), 18);
+        Assert.assertEquals(strikeFrame.getBonusScore(frame, spareFrame), 18);
+        Assert.assertEquals(strikeFrame.getBonusScore(frame, frame), 18);
+        Assert.assertEquals(spareFrame.getBonusScore(strikeFrame, strikeFrame), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(strikeFrame, spareFrame), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(strikeFrame, frame), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(spareFrame, strikeFrame), 15);
+        Assert.assertEquals(spareFrame.getBonusScore(spareFrame, spareFrame), 15);
+        Assert.assertEquals(spareFrame.getBonusScore(spareFrame, frame), 15);
+        Assert.assertEquals(spareFrame.getBonusScore(frame, strikeFrame), 16);
+        Assert.assertEquals(spareFrame.getBonusScore(frame, spareFrame), 16);
+        Assert.assertEquals(spareFrame.getBonusScore(frame, frame), 16);
     }
 
     @Test
     public void penultimateStrikeFrameTest() {
-        Assert.assertEquals(strikeFrame.getScore(lastFrame1), 30);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame2), 30);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame3), 27);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame4), 27);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame5), 20);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame7), 20);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame8), 20);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame9), 20);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame10), 20);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame11), 20);
-        Assert.assertEquals(strikeFrame.getScore(lastFrame12), 16);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame1), 30);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame2), 30);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame3), 27);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame4), 27);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame5), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame7), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame8), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame9), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame10), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame11), 20);
+        Assert.assertEquals(strikeFrame.getBonusScore(lastFrame12), 16);
     }
 
     @Test
     public void penultimateSpareFrameTest() {
-        Assert.assertEquals(spareFrame.getScore(lastFrame1), 20);
-        Assert.assertEquals(spareFrame.getScore(lastFrame2), 20);
-        Assert.assertEquals(spareFrame.getScore(lastFrame3), 20);
-        Assert.assertEquals(spareFrame.getScore(lastFrame4), 20);
-        Assert.assertEquals(spareFrame.getScore(lastFrame5), 16);
-        Assert.assertEquals(spareFrame.getScore(lastFrame7), 16);
-        Assert.assertEquals(spareFrame.getScore(lastFrame8), 20);
-        Assert.assertEquals(spareFrame.getScore(lastFrame9), 20);
-        Assert.assertEquals(spareFrame.getScore(lastFrame10), 20);
-        Assert.assertEquals(spareFrame.getScore(lastFrame11), 10);
-        Assert.assertEquals(spareFrame.getScore(lastFrame12), 14);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame1), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame2), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame3), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame4), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame5), 16);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame7), 16);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame8), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame9), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame10), 20);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame11), 10);
+        Assert.assertEquals(spareFrame.getBonusScore(lastFrame12), 14);
     }
 
     @Test
     public void penultimateFrameTest() {
-        Assert.assertEquals(frame.getScore(lastFrame1), 8);
-        Assert.assertEquals(frame.getScore(lastFrame2), 8);
-        Assert.assertEquals(frame.getScore(lastFrame3), 8);
-        Assert.assertEquals(frame.getScore(lastFrame4), 8);
-        Assert.assertEquals(frame.getScore(lastFrame5), 8);
-        Assert.assertEquals(frame.getScore(lastFrame7), 8);
-        Assert.assertEquals(frame.getScore(lastFrame8), 8);
-        Assert.assertEquals(frame.getScore(lastFrame9), 8);
-        Assert.assertEquals(frame.getScore(lastFrame10), 8);
-        Assert.assertEquals(frame.getScore(lastFrame11), 8);
-        Assert.assertEquals(frame.getScore(lastFrame12), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame1), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame2), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame3), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame4), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame5), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame7), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame8), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame9), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame10), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame11), 8);
+        Assert.assertEquals(frame.getBonusScore(lastFrame12), 8);
     }
 
     @Test
