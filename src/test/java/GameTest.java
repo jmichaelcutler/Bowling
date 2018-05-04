@@ -29,6 +29,7 @@ public class GameTest {
         Assert.assertEquals(scorer.score(game3), 150);
         Assert.assertEquals(scorer.score(game4), 167);
         Assert.assertEquals(scorer.score(game5), 0);
+        Assert.assertEquals(scorer.score(""), 0);
     }
 
     @Test(expected = Exception.class)
